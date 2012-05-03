@@ -1,0 +1,34 @@
+apply plugin: 'groovy'
+apply plugin: 'idea'
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    compile 'org.codehaus.groovy:groovy-all:1.8.5'
+    groovy group: 'org.codehaus.groovy', name: 'groovy', version: '1.8.5'
+    compile 'org.codehaus.groovy.modules.http-builder:http-builder:0.5.2'
+    groovy group: 'org.apache.httpcomponents', name: 'httpmime', version: '4.0.3'
+    testRuntime 'commons-logging:commons-logging:1.1.1', 'log4j:log4j:1.2.14'
+    testCompile 'org.seleniumhq.selenium:selenium-java:2.16.1'
+    compile 'junit:junit-dep:4.10'
+    testCompile 'joda-time:joda-time:2.0'
+    testCompile 'log4j:log4j:1.2.14'
+    compile 'org.slf4j:slf4j-api:1.6.4'
+    compile 'org.slf4j:slf4j-log4j12:1.6.4'
+
+    springVersion = "3.0.5.RELEASE" //Can only be upgraded with Broadway
+    compile "org.springframework:spring-core:${springVersion}"
+    compile "org.springframework:spring-web:${springVersion}"
+    compile "org.springframework:spring-webmvc:${springVersion}"
+    compile "org.springframework:spring-beans:${springVersion}"
+    compile "org.springframework:spring-context:${springVersion}"
+    compile "org.springframework:spring-context-support:${springVersion}"
+    compile "org.springframework:spring-oxm:${springVersion}"
+    compile 'org.springframework.ws:spring-ws-core:2.0.2.RELEASE'
+    compile 'org.springframework.ws:spring-xml:2.0.2.RELEASE'
+}
+
